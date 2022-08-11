@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物导航商城</title>
+    <style>
+      /*此次vh为view height的意思，浏览器试图高度，数值为百分比*/
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /*此处为布局技巧：用通用选择器*{} 给所有元素加一个边框
+      布局完最后将元素边框去掉*/
+      /* * {
+        border: 1px solid black;
+      } */
+      .Yinying{
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px;
+      }
+      .flex {
+        display: flex;
+      }
+      .Baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+    /*mg8上下左右外边距8px*/
+      .mg8{
+        margin: 8px;
+      }
+      /*mgr8右边距8px*/
+      .mgr8{
+        margin-right:8px;
+      }
+      /*mgt8上边距8px*/
+      .mgt8{margin-top:8px;}
+      .daohang{
+        padding: 10px 20px;
+        border-bottom: 1px solid grey;
+font-size: 20px;
+color:#666
+      }
+      /*移动端适配 小于600px不显示侧边栏，内容区数据区呈竖行排列*/
+      @media (max-width:600px) {
+        .cebian
+        {
+          display:none
+        }
+        .neirong{
+          flex-direction: column;
+        }
+        .shujuqu{flex-direction: column;}
+        .youqu{margin-left 8px;}
+        .shuju{margin:0 0 8px;
+        flex:auto;}
+      }
+      .img{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: row;
+      }
+    /*隐藏滚动条*/
+      .neirong::-webkit-scrollbar{display: none;}
+      .btn { border: solid 1px #D57E3B; background-color: #f60; color: #fff; }
+      .flex2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .flex3{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+      }
+      .flex4{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+       </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div style="width: 200px;z-index:2;" class="Baise Yinying cebian">
+    <!-- 头像栏 --><div 
+    style="padding:10px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #999;" 
+    class="flex"
+    ><img src="photo/TX-03.jpg" width="50px" height="50px" alt="Hug"> 
+    <div style="margin-left:10px;">商城</div></div>
+   
+    <!-- 导航栏 -->
+    <div class="flex1">
+      <div class="daohang">
+        <a target="_blank" href="https://www.jd.com/">京东</a>
+        </div>
+      <div class="daohang">
+        <a target="_blank" href="https://www.taobao.com/">
+        淘宝</a>
+      </div>
+      <div class="daohang"><a target="_blank" href="https://www.tmall.com/">天猫</a></div>
+      <div class="daohang">
+        <a target="_blank" href="https://www.vip.com/?wq=1&wxsdk=1">唯品会</a>
+      
+      </div>
+      <div class="daohang">
+        <a target="_blank" href="https://www.mi.com/">
+          小米商城
+        </a></div>
+      <div class="daohang">
+        <a target="_blank" href="https://www.hihonor.com/">荣耀商城</a></div>
+        <div class="daohang">
+          <a target="_blank" href="https://www.huawei.com/">华为</a>
+        </div>
+        <div class="daohang">
+          <a target="_blank" href="https://www.opposhop.cn/">OPPO</a>
+        </div>
+        <div class="daohang">
+          <a target="_blank" href="https://www.vivo.com.cn/">VIVO</a>
+        </div>
+    </div></div>
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 头部栏 -->
+      <div style="height: 60px;z-index:1;" class="Baise Yinying flex2">
+      <h2>欢迎光临购物导航网站，本站可以直接导航至各大购物网站，站内包含购物插件，致力让大家有更好的网上购物体验</h2>
+      </div>
+      <!-- 内容区 -->
+      <div style="overflow: auto;" class="flex1 flex neirong">
+      <!-- 左区 -->
+      <div style="flex: 3" class="flex column mg8">
+        <!-- 数据区 -->
+        <div class="flex shujuqu" >
+            <!-- 数据块 -->
+            <div style="height: 120px;" class="flex1 Baise mgr8 Yinying shuju img">
+              <a target="_blank" href="https://diannao.jd.com/">
+                <img src="flex-photo/computer.jpeg" alt="电脑" width="80" height="80">
+  <div class="img">电脑专区</div>
+              </a>
+            </div>
+            <!-- 数据块 -->
+            <div style="height: 120px;" class="flex1 Baise mgr8 Yinying shuju img">
+            <a target="_blank" href="https://prodev.jd.com/mall/active/Y9FVe619hMoajzqpxky1CQQJAkk/index.html">
+              <img src="flex-photo/phono-.jpeg" alt="手机" width="80" height="80">
+              <div class="img">手机专区</div>
+            </a>
+            </div>
+            <!-- 数据块 -->
+            <div style="height: 120px;" class="flex1 Baise mgr8 Yinying shuju img">
+            <a target="_blank" href="https://list.jd.com/list.html?cat=670,671,2694">
+              <img src="flex-photo/pad.jpeg" alt="平板" width="80" height="80">
+              <div class="img">平板专区</div>
+            </a>
+
+            </div>
+            <!-- 数据块 -->
+            <div style="height: 120px;" class="flex1 Baise Yinying shuju img">
+            <a target="_blank" href="https://list.jd.com/list.html?cat=737,794,798">
+            <img src="flex-photo/tv.jpeg" alt="电视" width="80" height="80">
+            <div class="img">电视专区</div>
+            </a>
+          </div>
+        </div>
+        <!-- 列表区 -->
+        <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 180px;" class="Baise mgt8 Yinying">
+            <div style="border: solid 1px #c5c5c5; margin-bottom: 10px; overflow: hidden;" class="mgt8">
+                <div style="background-color: #f7fafd; border-bottom: solid 1px #c5c5c5;text-align: left;">
+                    <div style="font-size:14px; line-height:36px; height:36px; margin-left:20px;color:#0a3761">
+                        <b>[查询商品历史价格走势]</b> 京东、天猫、淘宝、拼多多、亚马逊、苏宁、当当、考拉、严选、国美等商品网址
+                        </div>
+               
+                </div>
+                <div style="margin-left:20px; margin-top:10px;">
+                <div style="line-height: 30px;height:40px; text-align:left;font-size:14px;">
+               输入商品的对应网页地址(如<a href="http://p.zwjhl.com/price.aspx?url=http%3A%2F%2Fitem.jd.com%2F1378536.html" style="color:#333;">http://item.jd.com/1378536.html</a>)
+              </div>
+             
+              <div style="line-height: 30px;height:40px; text-align:left;">
+              <input id="url" name="url" class="wizardTxtField" type="text" value="" style="width: 1120px;">
+               </div>
+              <div><a style="line-height: 30px;height:40px; text-align:left; margin:10px 0px;">
+              <a target="_blank" href="http://www.lsjgcx.com/"><input type="submit" class="btn" value="查询"></a>
+
+                            <span style=" color:#999; margin-left:20px;">有时查询会比较慢，请耐心等待</span>
+                  </div> </div>
+            </div>
+            </div>
+            <!-- 列表项 -->
+            <div style="height: 200px;" class="Baise mgt8 Yinying">
+          <div class="flex4"><h2 style="color: blue;">评测专区</h2></div>
+          <div class="flex3">
+          <a target="_blank" href="https://www.antutu.com/">
+              <img src="photo/antutu.jpeg" alt="手机评测" width="240" height="100">
+              
+            </a> <a target="_blank" href="https://www.antutu.com/">手机评测</a>
+         <a target="_blank" href="https://www.pconline.com.cn/">
+              <img src="photo/taipy.png" alt="电脑评测" width="300" height="100">
+            </a>
+          <a target="_blank" href="https://www.pconline.com.cn/">电脑评测</a>
+          </div>
+            </div>
+            <!-- 列表项 -->
+            <div style="height: 400px;" class="Baise mgt8 Yinying">
+            <div class="flex4">
+              <h2 style="color:aquamarine">热门商品</h2>
+            </div>
+            <div class="flex" style="margin-left:20px;">
+              <img src="flex-photo/lenovo.png" alt="联想" width="400" height="300">
+              <div class="flex4">
+                <div style="display: block;">
+                  <a target="_blank" href="https://item.jd.com/100032480147.html">点此跳转到京东购买链接</a>
+                </div>
+            <div style="display: block;margin-top: 20px;">
+              <a target="_blank" href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-24497042075.1.2f6f2d25OIzkot&id=653354045771&scene=taobao_shop&sku_properties=20105:103646;20122:526432424;5919063:6536025"
+            >点此跳转到淘宝购买链接</a></div>
+            <div style="margin-top:20px;">
+              <a target="_blank" href="https://item.lenovo.com.cn/product/1023817.html">
+                点此跳转到官网购买链接
+              </a>
+            </div>
+          </div>
+            <div class="flex" style="margin-left:30px;"><img src="flex-photo/dell.png" alt="戴尔" width="300" heitght="200">
+            <div class="flex4" style="margin-left:20px">
+              <a target="_blank" href="https://item.jd.com/100029347965.html">点此跳转到京东购买链接</a>
+              <div style="margin-top: 20px;">
+              <a target="_blank" href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5001-14870260880.3.10ea4312s1K5az&id=672693352779&scene=taobao_shop&sku_properties=5919063:6536025">
+                点此跳转到淘宝购买链接
+              </a></div>
+              <div style="margin-top: 20px;">
+              <a target="_blank" href="https://www.dell.com/zh-cn/shop/cty/pdp/spd/g-series-16-7620-laptop?ref=cpbc_1_cta_primary_">
+                点此跳转到官网购买链接
+              </a></div>
+             </div>
+            </div>
+        </div>
+            </div>
+            <!-- 列表项 -->
+            <div style="height: 350px;" class="Baise mgt8 Yinying">
+            <div class="flex" style="margin-top: 20px;">
+              <img src="flex-photo/ausr.png" alt="华硕" width="400" height="300">
+              <div class="flex4">
+<a target="_blank" href="https://item.jd.com/100018313977.html">点此跳转到京东购买链接</a>
+<div style="margin-top: 20px;">
+<a target="_blank" href="https://detail.tmall.com/item.htm?id=674026424769&spm=a230r.7195193.1997079397.7.17585765kz8jBv&abbucket=9&sku_properties=20105:103646;20122:15515349;5919063:6536025">
+  点此跳转到淘宝购买链接
+</a></div>
+<div style="margin-top:20px">
+  <a target="_blank" href="https://www.asus.com.cn/store/product-1462994448.html">
+    点此跳转到官网购买链接
+  </a>
+</div>
+              </div>
+              <div class="flex" style="margin-left:30px;"><img src="flex-photo/hp.png" alt="惠普" width="350" height="300">
+              <div class="flex4" style="margin-left:10px">
+                <a target="_blank" href="https://item.jd.com/100039357228.html">点此跳转到京东购买链接</a>
+                
+              <div style="margin-top:20px">
+                <a target="_blank" href="https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.5d415335A3jfgs&id=668606962372&skuId=4996117699157&areaId=440500&user_id=2917728985&cat_id=2&is_b=1&rn=bf3ccba967d1fc7b8ff21a38237556b1">
+                  点此跳转到淘宝购买链接
+                </a></div>
+              <div style="margin-top:20px;"><a target="_blank" href="https://www.hpstore.cn/laptops-tablets/personal-laptops/omen-laptops/17-ck1007tx-6h9d9pa-1.html">
+点此跳转到官网购买链接
+              </a></div>
+                  </div>
+              </div>
+            </div>
+            </div>
+            <!-- 列表项 -->
+            <div style="height: 350px;" class="Baise mgt8 Yinying">
+            <div class="flex">
+              <img src="flex-photo/iphone13.png" alt="苹果" width="350" height="340">
+              <div class="flex4">
+                <h2>iphone13</h2>
+              <a target="_blank" href="https://item.jd.com/100026667910.html#none">点此跳转到京东购买链接</a>
+              <div style="margin-top: 20px;"><a target="_blank" href="https://detail.tmall.com/item.htm?id=656168531109&spm=a230r.7195193.1997079397.14.20051eb7kOd0j1&abbucket=9">
+                点此跳转到淘宝购买链接</a></div>
+                <div style="margin-top: 20px;"><a target="_blank" href="https://www.apple.com.cn/shop/buy-iphone/iphone-13?afid=p238%7CH9j6GaeE_mtid_18707vxu38484&cid=aos-cn-kwba-brand-bz">
+                  点此跳转到官网购买链接
+                </a></div>
+              </div>
+              <div style="margin-top:15px;margin-left: 50px;" class="flex"><img src="/flex-photo/x80.png" alt="vivo" width="260" height="320">
+              <div class="flex4" style="margin-left: 10px;">
+                <h2>vivoX80</h2>
+                <a target="_blank" href="https://item.jd.com/100037815830.html">点此跳转到京东购买链接</a>
+              <div style="margin-top:20px"><a target="_blank" href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-22979106319.3.a4c669f1FEEzCe&id=670819533653&scene=taobao_shop&sku_properties=5919063:6536025;122216431:27772">
+                  点此跳转到淘宝购买链接
+                </a></div>
+                <div style="margin-top:20px"><a target="_blank" href="https://shop.vivo.com.cn/product/10007339?cid=w-2-baidu-pz-x80-pp-105">点此跳转到官网购买链接</a></div>
+               </div>
+            </div>
+            </div>
+            
+          </div>
+            <!-- 列表项 -->
+            <div style="height: 350px;" class="Baise mgt8 Yinying">
+            <div style="margin-top:20px;margin-left: 30px;" class="flex">
+              <img src="/flex-photo/honor70.png" alt="荣耀" width="310" height="320">
+              <div class="flex4">
+                <h2>HONOR70</h2>
+                <a target="_blank" href="https://item.jd.com/100038849174.html#none">点此跳转到京东购买链接</a>
+              <div style="margin-top: 20px;"><a target="_blank" href="https://detail.tmall.com/item.htm?spm=a220o.1000855.w13636028-22466311958.56.1d854766y0NZqI&id=674609094725&scene=taobao_shop&sku_properties=10004:7195672376;5919063:6536025">
+                点此跳转到淘宝购买链接
+              </a></div>
+              <div style="margin-top:20px;"><a target="_blank" href="https://www.hihonor.com/cn/shop/product/10086031010859.html?cid=132344">
+                点此跳转到官网购买链接
+              </a></div>
+              </div>
+              <div class="flex" style="margin-left:30px;">
+                <img src="/flex-photo/k50.png" alt="红米" width="300" height="320">
+              <div class="flex4" style="margin-left: 10px;">
+                <h2>redmiK50</h2>
+                <a target="_blank" href="https://item.jd.com/100020076125.html#none">
+                点此跳转到京东购买链接
+              </a>
+             <div class="flex4" style="margin-top:20px;"><a target="_blank" href="https://detail.tmall.com/item.htm?id=669920611441&spm=a230r.7195193.1997079397.7.5cd41b11XWW65i&abbucket=9&sku_properties=10004:7195672376;5919063:6536025">
+                点此跳转到淘宝购买链接
+              </a></div>
+            <div style="margin-top:20px;"><a target="_blank" href="https://www.mi.com/shop/buy/detail?product_id=15694">点此跳转到官网购买链接</a></div>
+            </div>
+              </div>
+            </div>
+            </div>
+            
+         <!-- 列表项 -->
+            <div style="height: 199px;" class="mgt8 Yinying">
+             <img width="1200" height="199" src="https://p2.lefile.cn/product/adminweb/2019/08/19/8359a28f-9cce-463d-aaf5-b3c7148872f7.png" _src="https://p2.lefile.cn/product/adminweb/2019/08/19/8359a28f-9cce-463d-aaf5-b3c7148872f7.png">
+            </div>
+            <!-- 底部区域 -->
+            <div style="height:120px;color:aqua;justify-content: center;align-items: center;font-size: 25px;" class="flex">版权所有Copyright©2022Hug</div>
+          </div>
+        </div>
+      <!-- 右区 -->
+      <div style="flex: 1" class="flex column mgr8 mgt8 youqu">
+        <!-- 提示区 -->
+        <div style="height: 500px" class="Baise Yinying">
+<div class="img"><iframe frameborder="no" border="0" marginwidth="0" width="350" height="140" src="https://music.163.com/outchain/player?type=2&amp;id=28828063&amp;auto=1&amp;height=32;"></iframe>
+</div></div>
+        <!-- 消息区 -->
+        <div style="height: 800px" class="Baise mgt8 Yinying">
+<iframe height="750" src="http://weather.news.qq.com/inc/ss218.htm" frameborder="0" width="380" scrolling="no"></iframe>
+      </div>
+      <!-- 消息区 -->
+      <div style="height:400px;" class="Baise mgt8 Yingying">
+        <h1 style="text-align:center;">点击下方与我联系</h1>
+      <div style="text-align:center;"><a
+        target="_blank"
+        href="http://wpa.qq.com/msgrd?v=3&uin=1014480169&site=qq&menu=yes"
+        ><img
+          src="http://wpa.qq.com/pa?p=2:1014480169:51"
+          alt="点击这里给我发消息"
+          title="点击这里给我发消息"
+      /></a></div>
+      <div style="color:#f60"><h2>声明：在本站购物网站中购买商品产生任何纠纷与本站无关。</h2>
+      <h2>本站仅做为学习使用，无任何商业用途，解释权归本站作者所有，如有侵权请联系删除。
+        <h2 style="color:cadetblue">学习交流或有建站需求可通过上方QQ添加作者</h2>
+      </h2></div>
+</div>
+    </div>
+  </body>
+</html>
